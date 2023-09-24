@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{969507B4-617C-44BE-8593-D66C26E4FEE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bank_System_Project</RootNamespace>
+    <AssemblyName>Bank-System-Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Lib Design\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\Lib Design\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsBankClient.cs" />
+    <Compile Include="Classes\clsCurrency.cs" />
+    <Compile Include="Classes\clsPerson.cs" />
+    <Compile Include="Classes\clsUser.cs" />
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucGeneral\ucSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucGeneral\ucSetting.Designer.cs">
+      <DependentUpon>ucSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucCurrencyCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucCurrencyCalculator.Designer.cs">
+      <DependentUpon>ucCurrencyCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucFindCurrency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucFindCurrency.Designer.cs">
+      <DependentUpon>ucFindCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucListCurrensise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucListCurrensise.Designer.cs">
+      <DependentUpon>ucListCurrensise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucUpdateRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucUpdateRate.Designer.cs">
+      <DependentUpon>ucUpdateRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucCurrencyExchange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucCurrency\ucCurrencyExchange.Designer.cs">
+      <DependentUpon>ucCurrencyExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucGeneral\ucAccessDenied.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucGeneral\ucAccessDenied.Designer.cs">
+      <DependentUpon>ucAccessDenied.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucAddNewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucAddNewUser.Designer.cs">
+      <DependentUpon>ucAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucDeleteUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucDeleteUser.Designer.cs">
+      <DependentUpon>ucDeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucFindUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucFindUser.Designer.cs">
+      <DependentUpon>ucFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucListUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucListUsers.Designer.cs">
+      <DependentUpon>ucListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucResetPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucResetPassword.Designer.cs">
+      <DependentUpon>ucResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucUpdateUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucUpdateUser.Designer.cs">
+      <DependentUpon>ucUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransferLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransferLog.Designer.cs">
+      <DependentUpon>ucTransferLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTotalBalances.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTotalBalances.Designer.cs">
+      <DependentUpon>ucTotalBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransfer.Designer.cs">
+      <DependentUpon>ucTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucWithdraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucWithdraw.Designer.cs">
+      <DependentUpon>ucWithdraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucDeposit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucDeposit.Designer.cs">
+      <DependentUpon>ucDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucLoginRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucLoginRegister.Designer.cs">
+      <DependentUpon>ucLoginRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucMangeUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser\ucMangeUsers.Designer.cs">
+      <DependentUpon>ucMangeUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTransaction\ucTransactions.Designer.cs">
+      <DependentUpon>ucTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucFindClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucFindClient.Designer.cs">
+      <DependentUpon>ucFindClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucUpdateClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucUpdateClient.Designer.cs">
+      <DependentUpon>ucUpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucDeleteClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucDeleteClient.Designer.cs">
+      <DependentUpon>ucDeleteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucAddNewClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucAddNewClient.Designer.cs">
+      <DependentUpon>ucAddNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucGeneral\ucMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucGeneral\ucMain.Designer.cs">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucShowClientList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucClient\ucShowClientList.Designer.cs">
+      <DependentUpon>ucShowClientList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControls\ucGeneral\ucSetting.resx">
+      <DependentUpon>ucSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCurrency\ucCurrencyCalculator.resx">
+      <DependentUpon>ucCurrencyCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCurrency\ucFindCurrency.resx">
+      <DependentUpon>ucFindCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCurrency\ucListCurrensise.resx">
+      <DependentUpon>ucListCurrensise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCurrency\ucUpdateRate.resx">
+      <DependentUpon>ucUpdateRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucCurrency\ucCurrencyExchange.resx">
+      <DependentUpon>ucCurrencyExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucGeneral\ucAccessDenied.resx">
+      <DependentUpon>ucAccessDenied.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucAddNewUser.resx">
+      <DependentUpon>ucAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucDeleteUser.resx">
+      <DependentUpon>ucDeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucDeposit.resx">
+      <DependentUpon>ucDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucFindUser.resx">
+      <DependentUpon>ucFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucListUsers.resx">
+      <DependentUpon>ucListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucLoginRegister.resx">
+      <DependentUpon>ucLoginRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucMangeUsers.resx">
+      <DependentUpon>ucMangeUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClient\ucFindClient.resx">
+      <DependentUpon>ucFindClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucResetPassword.resx">
+      <DependentUpon>ucResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucTotalBalances.resx">
+      <DependentUpon>ucTotalBalances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucTransactions.resx">
+      <DependentUpon>ucTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucTransfer.resx">
+      <DependentUpon>ucTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucTransferLog.resx">
+      <DependentUpon>ucTransferLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClient\ucUpdateClient.resx">
+      <DependentUpon>ucUpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClient\ucAddNewClient.resx">
+      <DependentUpon>ucAddNewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClient\ucDeleteClient.resx">
+      <DependentUpon>ucDeleteClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucGeneral\ucMain.resx">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucClient\ucShowClientList.resx">
+      <DependentUpon>ucShowClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser\ucUpdateUser.resx">
+      <DependentUpon>ucUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTransaction\ucWithdraw.resx">
+      <DependentUpon>ucWithdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
